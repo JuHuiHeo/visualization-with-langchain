@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아이폰 가격</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .chart {
+      width: 800px;
+      height: 500px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="chart"></div>
+  <script>
+    const data = [
+      { year: 2020, value: 1000 },
+      { year: 2021, value: 1100 },
+      { year: 2022, value: 1300 },
+      { year: 2023, value: 900 }
+    ];
+
+    const margin = { top: 30, right: 30, bottom: 50, left: 60 };
+    const width = 800 - margin.left - margin.right;
+    const height = 500 - margin.top - margin.bottom;
+
+    const svg = d3.select('.chart').append('svg')
+      .attr('width', width + margin.left + margin.right)
+      .attr('height', height + margin.top + margin.bottom)
+      .append('g').attr('transform', `translate(${margin.left}, ${margin.top})`);
+
+    const x = d3.scaleLinear().domain(d3.extent(data, d => d.year)).range([0, width]);
+    const y = d3.scaleLinear().domain([0, d3.max(data, d => d.value)]).range([height, 0]);
+
+    const line = d3.line().x(d => x(d.year)).y(d => y(d.value));
+
+    svg.append('path').datum(data).attr('class', 'line').attr('d', line)
+      .attr('fill', 'none').attr('stroke', 'steelblue').attr('stroke-width', 2);
+
+    svg.append('g').attr('class', 'x-axis').attr('transform', `translate(0, ${height})`)
+      .call(d3.axisBottom(x).tickFormat(d3.format('d')));
+
+    svg.append('g').attr('class', 'y-axis').call(d3.axisLeft(y));
+
+    svg.selectAll('.axis text').attr('font-family', 'Noto Sans KR, sans-serif').attr('font-size', 12);
+
+    svg.append('text').attr('x', width / 2).attr('y', height + 40).attr('text-anchor', 'middle')
+      .attr('font-family', 'Noto Sans KR, sans-serif').attr('font-size', 14).text('연도');
+
+    svg.append('text').attr('transform', 'rotate(-90)').attr('x', -height / 2).attr('y', -margin.left + 20)
+      .attr('text-anchor', 'middle').attr('font-family', 'Noto Sans KR, sans-serif').attr('font-size', 14)
+      .text('가격 (달러)');
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+///////////////////////
+user input: 
+2019년에 음성 인식 시장의 규모는 약 13억 달러에 달했고, 2025년까지 매년 일정하게 시장 규모가 증가해 268억 달러에 달할 예정이야. 이것을 꺾은선 그래프로 그래줘.
+
+Since this user input involves quantification, you are expected to generate D3.js code that have following format:
+///////////////////////
+generated: [D3.js code]
+details: <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>음성 인식 시장 규모</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <style>
+    body {{
+      font-family: 'Noto Sans KR', sans-serif;
+    }}
+    .chart {{
+      width: 800px;
+      height: 500px;
+      margin: 0 auto;
+    }}
+  </style>
+</head>
+<body>
+  <div class="chart"></div>
+  <script>
+    const data = [
+      {{ year: 2019, value: 13 }},
+      {{ year: 2020, value: 50 }},
+      {{ year: 2021, value: 90 }},
+      {{ year: 2022, value: 150 }},
+      {{ year: 2023, value: 210 }},
+      {{ year: 2024, value: 270 }},
+      {{ year: 2025, value: 268 }}
+    ];
+
+    const margin = {{ top: 30, right: 30, bottom: 50, left: 60 }};
+    const width = 800 - margin.left - margin.right;
+    const height = 500 - margin.top - margin.bottom;
+
+    const svg = d3.select('.chart').append('svg')
+      .attr('width', width + margin.left + margin.right)
+      .attr('height', height + margin.top + margin.bottom)
+      .append('g').attr('transform', `translate(${{margin.left}}, ${{margin.top}})`);
+
+    const x = d3.scaleLinear().domain(d3.extent(data, d => d.year)).range([0, width]);
+    const y = d3.scaleLinear().domain([0, d3.max(data, d => d.value)]).range([height, 0]);
+
+    const line = d3.line().x(d => x(d.year)).y(d => y(d.value));
+
+    svg.append('path').datum(data).attr('class', 'line').attr('d', line)
+      .attr('fill', 'none').attr('stroke', 'steelblue').attr('stroke-width', 2);
+
+    svg.append('g').attr('class', 'x-axis').attr('transform', `translate(0, ${{height}})`)
+      .call(d3.axisBottom(x).tickFormat(d3.format('d')));
+
+    svg.append('g').attr('class', 'y-axis').call(d3.axisLeft(y));
+
+    svg.selectAll('.axis text').attr('font-family', 'Noto Sans KR, sans-serif').attr('font-size', 12);
+
+    svg.append('text').attr('x', width / 2).attr('y', height + 40).attr('text-anchor', 'middle')
+      .attr('font-family', 'Noto Sans KR, sans-serif').attr('font-size', 14).text('연도');
+
+    svg.append('text').attr('transform', 'rotate(-90)').attr('x', -height / 2).attr('y', -margin.left + 20)
+      .attr('text-anchor', 'middle').attr('font-family', 'Noto Sans KR, sans-serif').attr('font-size', 14)
+      .text('시장 규모 (억 달러)');
+
+  </script>
+</body>
+</html>
+///////////////////////
+
+///////////////////////
+user input:
+초록색의 나무 픽토그램을 그려줘
+
+Since this user input is not about quantification, you are expected to generate text prompt for DALL-E 2. 
+Following the instructions stated before, you should extract pictrogram, tree, green from translated user input.
+Final format of generation must look like this:
+///////////////////////
+generated: [DALL-E 2 prompt]
+details: pictogram of green tree
+///////////////////////
+
+Now execute generation according to following user input:
