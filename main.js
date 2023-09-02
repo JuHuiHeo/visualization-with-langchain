@@ -72,12 +72,6 @@ function saveDescriptionToHtml(description){
   fs.writeFile('description.html', description, (err)=> console.log(err));
 }
 
-// 생성된 image.html을 읽어오는 함수
-function readImageHtml() {
-  const htmlContent = fs.readFileSync('image.html', { encoding: "utf-8"});
-  const scriptContentMatch = htmlContent.match(/<script>([\s\S]+?)<\/script>/);
-  return scriptContentMatch ? scriptContentMatch[1] : "";
-}
 
 // GPT 3.5에게 D3.js 코드 설명을 요청하는 함수
 async function getDescriptionFromGPT(d3Content) {
@@ -178,8 +172,9 @@ async function askQuestion(iteration) {
           finalResult = result;
           fs.writeFile('image.html', result, (err) => console.log(err));}
 
-          // 여기서 image.html에서 <script> 부분을 읽어와 GPT-3.5에게 전달합니다. --> 동기 비동기 처리 문제인거 같은데 실행이 안됨ㅠㅠ
-          const d3Content = readImageHtml();
+          // 여기서 GPT-3.5에게 전달합니다.
+          const scriptContentMatch = result.match(/<script>([\s\S]+?)<\/script>/);
+          const d3Content = scriptContentMatch ? scriptContentMatch[1] : ""; 
           console.log(d3Content);
           const description = await getDescriptionFromGPT(d3Content);
           saveDescriptionToHtml(description);
