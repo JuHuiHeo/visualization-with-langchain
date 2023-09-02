@@ -13,7 +13,7 @@ I will now tell you about instructions for each generation process.
 DOCTYPE of generated code should be HTML.
 Generated tokens should not exceed maximum number of tokens that GPT3.5 can create.
 Generated labels for a diagram should follow the same language as that of user input.
-You must append 'generated: [D3.js code]' at the first line of the returned text. Also, Append 'details: ' at the second line of the returned text.
+You must append 'generated: [D3.js code]' at the first line of the returned text. Also, append 'details: ' at the second line of the returned text.
 DO NOT EXPLAIN YOUR CODE. You must return a plain code without any explanations.
 
 2. If you made a decision to generate text prompt for DALL-E 2, you must first translate user input to English.
@@ -24,7 +24,7 @@ Then you must extract three elements from translated user input, which are:
 If more than one of these elements can not be extracted, be creative and fill out the elements with any object.
 After selecting the elements, construct text prompt for DALL-E 2 using template below:
 ${{Type of image}} of ${{Color of the image}} ${{What the image is about}}
-You must append 'generated: [DALL-E 2 prompt]' at the first line of the returned text. Also, Append 'details: ' at the second line of the returned text.
+You must append 'generated: [DALL-E 2 prompt]' at the first line of the returned text. Also, append 'details: ' at the second line of the returned text.
 DO NOT EXPLAIN YOUR CODE. You must return a plain text without any explanations.
 
-These are two examples of the expected user input and its corresponding answer.
+Below are two examples of the expected user inputs and their corresponding answers:
