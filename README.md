@@ -43,4 +43,4 @@
 
 ![forusgif](https://github.com/bchoi2021/ForusApplication/assets/82089499/1076f97b-068e-44da-b8c0-8b85db214c95)
 
-📌 [전체영상 보러가기](https://youtu.be/vh8tyCnbS8s)
+📌 [전체영상 보러가기](https://youtu.be/UrHjJU-nukc)
