@@ -7,7 +7,6 @@
 
 ## 1. 웹서비스 소개
 
-![001]https://github.com/JuHuiHeo/visualization-with-langchain/blob/beff487ad62967e40317861912cacd4baf313172)
 &nbsp;&nbsp;&nbsp;[하나의 시각 자료는 천 마디 말의 가치가 있다.(A visual aid is worth a thousand words.)]
 이 아이디어의 제안 배경은 "A picture is worth a thousand words"라는 속담에서 시작합니다.
 이 속담은 이미지의 정보 전달 효율성을 강조하지만, 이러한 능력은 시각 장애인에게는 대체로
@@ -31,20 +30,16 @@
 | 서버 | react, jotai, react query, spring framework, fastapi, d3, langchain |
 | 개발환경 | Windows, MacOs |
 
-## 3. Features
 
-![002](https://github.com/bchoi2021/ForusApplication/assets/82089499/fd3d1711-b346-42dd-a8bd-d06a7aa1fbbf)
-![003](https://github.com/bchoi2021/ForusApplication/assets/82089499/f5990728-21df-4feb-910e-1143299e1ab0)
-![004](https://github.com/bchoi2021/ForusApplication/assets/82089499/66cd928f-9aee-4073-8ec9-84af08f9f88a)
-![005](https://github.com/bchoi2021/ForusApplication/assets/82089499/51eb2975-e715-47f6-9024-c66451bca924)
-![006](https://github.com/bchoi2021/ForusApplication/assets/82089499/ea2e88fa-f924-4713-8202-969c8060e0cd)
+## 3. System Architecture
 
-## 4. System Architecture
-
-![007](https://github.com/bchoi2021/ForusApplication/assets/82089499/8b5bd1b6-faff-4568-9027-da325175342c)
+![001](https://github.com/JuHuiHeo/visualization-with-langchain/assets/82089499/ec6d51c8-5b07-4e00-923d-d64381d07d9c)
+![002](https://github.com/JuHuiHeo/visualization-with-langchain/assets/82089499/5248e66a-4d7d-47a5-b7e4-bd106e80ee85)
+![003](https://github.com/JuHuiHeo/visualization-with-langchain/assets/82089499/38d0fc7c-e79d-46d1-bb43-f16e562adac2)
+![004](https://github.com/JuHuiHeo/visualization-with-langchain/assets/82089499/ea1d107f-120c-4170-8bee-7989f3112d5d)
 
 
-## 5. 시연 영상
+## 4. MVP 시연 영상
 
 ![forusgif](https://github.com/bchoi2021/ForusApplication/assets/82089499/1076f97b-068e-44da-b8c0-8b85db214c95)
 
