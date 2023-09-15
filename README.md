@@ -6,6 +6,11 @@
 &nbsp;&nbsp;&nbsp;본 프로젝트는 2023 Prompter Day Swoul 2023 출품작입니다.
 
 ## 1. 웹서비스 소개
+![synnote_demovideo_fn_1080_Moment](https://github.com/JuHuiHeo/visualization-with-langchain/assets/82089499/50c27075-f369-434d-9d1a-7d02e8385f45)
+![synnote_demovideo_fn_1080_Moment2](https://github.com/JuHuiHeo/visualization-with-langchain/assets/82089499/fcd0600a-1554-4d40-ad41-26620e2b526c)
+![synnote_demovideo_fn_1080_Moment3](https://github.com/JuHuiHeo/visualization-with-langchain/assets/82089499/4f9d204f-80aa-4084-8daa-48739fedef2f)
+![synnote_demovideo_fn_1080_Moment4](https://github.com/JuHuiHeo/visualization-with-langchain/assets/82089499/fad08723-6907-4262-bf25-4599d1f62598)
+![synnote_demovideo_fn_1080_Moment5](https://github.com/JuHuiHeo/visualization-with-langchain/assets/82089499/b6b4880c-2d6b-405d-bab7-786d5af174fa)
 
 &nbsp;&nbsp;&nbsp;[하나의 시각 자료는 천 마디 말의 가치가 있다.(A visual aid is worth a thousand words.)]
 이 아이디어의 제안 배경은 "A picture is worth a thousand words"라는 속담에서 시작합니다.
@@ -40,7 +45,5 @@
 
 
 ## 4. MVP 시연 영상
-
-![forusgif](https://github.com/bchoi2021/ForusApplication/assets/82089499/1076f97b-068e-44da-b8c0-8b85db214c95)
 
 📌 [전체영상 보러가기](https://youtu.be/UrHjJU-nukc)
